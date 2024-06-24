@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer base {
+  :root {
+    &,
+    &.light-mode {
+      /* Grey */
+      --color-grey-0: #fff;
+      --color-grey-50: #f3f4f6;
+      --color-grey-200: #e5e7eb;
+      --color-grey-300: #d1d5db;
+      --color-grey-400: #9ca3af;
+      --color-grey-500: #6b7280;
+      --color-grey-600: #4b5563;
+      --color-grey-700: #374151;
+      --color-grey-800: #1f2937;
+      --color-grey-900: #111827;
+    }
+
+    &.dark-mode {
+      --color-grey-0: #18212f;
+      --color-grey-50: #111827;
+      --color-grey-100: #1f2937;
+      --color-grey-200: #374151;
+      --color-grey-300: #4b5563;
+      --color-grey-400: #6b7280;
+      --color-grey-500: #9ca3af;
+      --color-grey-600: #d1d5db;
+      --color-grey-700: #e5e7eb;
+      --color-grey-800: #f3f4f6;
+      --color-grey-900: #f9fafb;
+    }
+
+    --purple: #a729f5;
+
+    /* Indigo */
+    --color-brand-50: #eef2ff;
+    --color-brand-100: #e0e7ff;
+    --color-brand-200: #c7d2fe;
+    --color-brand-500: #6366f1;
+    --color-brand-600: #4f46e5;
+    --color-brand-700: #4338ca;
+    --color-brand-800: #3730a3;
+    --color-brand-900: #312e81;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-grey-50);
+}
+
+@layer components {
+  .option {
+    @apply bg-colorGrey2 w-full cursor-pointer items-center rounded-md p-[10px] shadow-md sm:p-[20px] md:w-[300px];
+  }
+}
+
+::-webkit-progress-bar {
+  background-color: var(--color-grey-0);
+  border-radius: 100px;
+}
+::-webkit-progress-value {
+  background-color: var(--purple);
+  border-radius: 100px;
+}
